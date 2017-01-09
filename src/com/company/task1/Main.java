@@ -17,13 +17,16 @@ public class Main {
         boolean isNegative = false;
         int len = str.length();
 
+        //if number is negative fixate it and skip this character
         if(str.charAt(0) == '-'){
             isNegative = true;
             i = 1;
         }
 
         while(i < len){
+            //multiply by ten to append new digit
             number *= 10;
+            //as we have last digit is '0' then just add new number (character)
             number += (str.charAt(i++) - '0');
         }
 
